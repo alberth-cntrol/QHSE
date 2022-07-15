@@ -80,17 +80,17 @@ $rs_borrar=mysqli_query($descriptor, $sel_borrar);
   </tr>
   <tr height="200px">
     <td>&nbsp;</td>
-    <td><div align="center"><img src="img/central.jpg" width="550" height="200" border="0" /></div></td>
+    <td><div align="center"><img src="img/logo-transp-oracle.png" width="450" height="150" border="0" /></div></td>
     <td>&nbsp;</td>
   </tr>
   <tr>
     <td>&nbsp;</td>
-    <td><div align="center" class="Estilo6">Jose Facturaci&oacute;n Web </div></td>
+    <td><div align="center" class="Estilo6">ORACLE CONSULTING</div></td>
     <td>&nbsp;</td>
   </tr>
   <tr>
     <td>&nbsp;</td>
-    <td><div align="center" class="Estilo6">Versi&oacute;n 1.0 </div></td>
+    <td><div align="center" class="Estilo6">Brinda en Soporte Profesional adecuado para un correcto Control y Seguimiento del Sistema Integrado de Gestión de las Empresas.</div></td>
     <td>&nbsp;</td>
   </tr>
   <tr>
@@ -116,8 +116,8 @@ $rs_borrar=mysqli_query($descriptor, $sel_borrar);
       <td height="27">&nbsp;</td>
       <td><table width="50%" border="0" align="center">
         <tr>
-          <td width="38%"><div align="right"><img src="img/firefox.gif" width="80" height="15" /></div></td>
-          <td width="62%"><span class="Estilo5">Aplicación optimizada para Firefox </span></td>
+          <!--<td width="38%"><div align="right"><img src="img/firefox.gif" width="80" height="15" /></div></td>
+          <td width="62%"><span class="Estilo5">Aplicación optimizada para Firefox </span></td>-->
         </tr>
       </table></td>
       <td>&nbsp;</td>

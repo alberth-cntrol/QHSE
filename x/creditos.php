@@ -25,17 +25,17 @@
   </tr>
   <tr height="200px">
     <td>&nbsp;</td>
-    <td><div align="center"><img src="img/central.jpg" width="550" height="200" border="0" /></div></td>
+    <td><div align="center"><img src="img/logo-transp-oracle.png" width="450" height="150" border="0" /></div></td>
     <td>&nbsp;</td>
   </tr>
   <tr>
     <td>&nbsp;</td>
-    <td><div align="center" class="Estilo7">Creadores</div></td>
+    <td><div align="center" class="Estilo7">Mienbros</div></td>
     <td>&nbsp;</td>
   </tr>
   <tr>
     <td>&nbsp;</td>
-    <td><div align="center" class="Estilo6">Pedro Obregon Mejias</div></td>
+    <td><div align="center" class="Estilo6">Castillo Llanos Alberth</div></td>
     <td>&nbsp;</td>
   </tr>
   <tr>
@@ -76,19 +76,14 @@
     <tr>
       <td>&nbsp;</td>
       <td><table width="50%" border="0" align="center">
-        <tr>
-          <td><div align="center"><span class="Estilo5">Resolución óptima 1024 x 768 píxeles  </span></div></td>
-        </tr>
+        
       </table></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td height="27">&nbsp;</td>
       <td><table width="50%" border="0" align="center">
-        <tr>
-          <td width="38%"><div align="right"><img src="img/firefox.gif" width="80" height="15" /></div></td>
-          <td width="62%"><span class="Estilo5">Aplicación optimizada para Firefox </span></td>
-        </tr>
+        
       </table></td>
       <td>&nbsp;</td>
     </tr>

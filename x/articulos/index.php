@@ -106,12 +106,12 @@ if ($cadena_busqueda<>"") {
 		<div id="pagina">
 			<div id="zonaContenido">
 				<div align="center">
-				<div id="tituloForm" class="header">Buscar ARTICULO </div>
+				<div id="tituloForm" class="header">Buscar Formularios </div>
 				<div id="frmBusqueda">
 				<form id="form_busqueda" name="form_busqueda" method="post" action="rejilla.php" target="frame_rejilla">
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>					
 						<tr>
-							<td width="16%">C&oacute;digo de art&iacute;culo </td>
+							<td width="16%">C&oacute;digo de Formulario </td>
 							<td width="68%"><input id="codarticulo" type="text" class="cajaPequena" NAME="codarticulo" maxlength="15" value="<?php echo $codarticulo?>" readonly="yes"> <img src="../img/ver.png" width="16" height="16" onClick="ventanaArticulos()" onMouseOver="style.cursor=cursor" title="Buscar articulos"></td>
 							<td width="5%">&nbsp;</td>
 							<td width="5%">&nbsp;</td>
@@ -129,9 +129,9 @@ if ($cadena_busqueda<>"") {
 						$contador=0;
 					  ?>
 						<tr>
-							<td>Familia</td>
+							<td>Formularios</td>
 							<td><select id="cboFamilias" name="cboFamilias" class="comboMedio">
-							<option value="0">Todas las familias</option>
+							<option value="0">Todos los Formularios</option>
 								<?php
 								while ($contador < mysqli_num_rows($res_familias)) { 
 									if ( mysqli_result($res_familias,$contador,"codfamilia") == $familia) { ?>
@@ -156,7 +156,7 @@ if ($cadena_busqueda<>"") {
 						$contador=0;
 					  ?>
 						<tr>
-							<td>Proveedor</td>
+							<td>Supervisor</td>
 							<td><select id="cboProveedores" name="cboProveedores" class="comboGrande">
 							<option value="0">Todos los proveedores</option>
 								<?php
@@ -176,7 +176,7 @@ if ($cadena_busqueda<>"") {
 						$contador=0;
 					  ?>
 						<tr>
-							<td>Ubicaci&oacute;n</td>
+							<td>Firma&oacute;n</td>
 							<td><select id="cboUbicacion" name="cboUbicacion" class="comboGrande">
 							<option value="0">Todas las ubicaciones</option>
 								<?php
@@ -199,13 +199,13 @@ if ($cadena_busqueda<>"") {
 			  <div id="lineaResultado">
 			  <table class="fuente8" width="80%" cellspacing=0 cellpadding=3 border=0>
 			  	<tr>
-				<td width="50%" align="left">N de articulos encontrados <input id="filas" type="text" class="cajaPequena" NAME="filas" maxlength="5" readonly></td>
+				<td width="50%" align="left">N de Formularios <input id="filas" type="text" class="cajaPequena" NAME="filas" maxlength="5" readonly></td>
 				<td width="50%" align="right">Mostrados <select name="paginas" id="paginas" onChange="paginar()">
 		          </select></td>
 			  </table>
 				</div>
 				<div id="cabeceraResultado" class="header">
-					relacion de ARTICULOS </div>
+					relacion de FORMULARIOS </div>
 				<div id="frmResultado">
 				<table class="fuente8" width="100%" cellspacing=0 cellpadding=3 border=0 ID="Table1">
 						<tr class="cabeceraTabla">
