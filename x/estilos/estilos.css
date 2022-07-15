@@ -141,7 +141,7 @@
 /*****************************************/
 /* clases relativas a tablas             */
 .header {
-	background-color:#4ECC17;
+	background:#ADD0D4;
 	color:#fff;
 	text-transform:uppercase;
 	text-align:center;
@@ -168,7 +168,7 @@
 	vertical-align:middle;
 }
 .cabeceraTabla {
-	background-color:#5f5f5f;
+	background-color:#759699;
 	color:#fff;
 	font-weight:bold;
 	text-align:center;

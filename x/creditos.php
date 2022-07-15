@@ -11,7 +11,7 @@
 	font-size: 10px;
 }
 .Estilo6 {font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif;}
-.Estilo7 {font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif; background:#D0FDCE; font-weight: bold}
+.Estilo7 {font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif; background:#ADD0D4; font-weight: bold}
 -->
 </style>
 </head>
@@ -30,7 +30,7 @@
   </tr>
   <tr>
     <td>&nbsp;</td>
-    <td><div align="center" class="Estilo7">Mienbros</div></td>
+    <td><div align="center" class="Estilo7">Miembros</div></td>
     <td>&nbsp;</td>
   </tr>
   <tr>

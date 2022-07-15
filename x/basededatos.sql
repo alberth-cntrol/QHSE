@@ -607,3 +607,6 @@ CREATE TABLE `ubicaciones` (
   `borrado` varchar(1) NOT NULL default '0',
   PRIMARY KEY  (`codubicacion`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='Ubicaciones' AUTO_INCREMENT=1 ;
+
+
+

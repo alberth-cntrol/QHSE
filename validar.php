@@ -1,5 +1,5 @@
 <?php 
-include('./conectar.php');
+include('conectar.php');
 $usuario=$_POST['usuario'];
 $contraseña=$_POST['password'];
 session_start();
@@ -22,7 +22,7 @@ if($filas){
     <?php
     include("index.php");
     ?>
-    <h1 class="bad">Error en la autoticacion</h1>
+    <h1 class="bad">Error en la autentificacion</h1>
     <?php 
 }
 mysqli_free_result($resultado);
