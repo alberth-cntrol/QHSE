@@ -1,0 +1,34 @@
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width:80%;
+}
+ul li {
+	position:relative;
+	display:block;
+	left:.5em;
+	padding:.5em;
+	margin:.2em;
+	background-color:#dcdcdc;
+	border:solid 1px #696969;
+	width:100%;
+}
+.submenu {
+	background-color:#ffffff;
+}
+ul li a {
+	text-decoration: none;
+}
+.itemOver 
+{
+	background-image:url(../img/icono1.gif);
+	background-position:left middle;
+	background-repeat:no-repeat;
+/*	background-color:#696969;*/
+	color:#ff8c00;
+}
+.itemOut {
+	background-color:#dcdcdc;
+	color:#000;
+}

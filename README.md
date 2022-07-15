@@ -1,2 +1,0 @@
-# QHSE
-pasaatias

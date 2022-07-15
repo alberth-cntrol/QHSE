@@ -1,0 +1,330 @@
+/*****************************************/
+/* clases relativas a contenedores       */
+#pagina {
+	position:absolute;
+	background-color:#fff;
+	font-family: helvetica;
+	font-size:8pt;
+	left:4%;
+	width:90%;
+}
+#zonaLogo {
+	position:absolute;
+	top:0em;
+	left:0em;
+	width:20%;
+	height:150px;
+	background-color:#fff;
+	text-align:center;
+	vertical-align:middle;
+}
+#zonaMenu {
+	position:absolute;
+	top:150px;
+	left:0em;
+	width:80%;
+	height:100%;
+	background-color:#fff;	
+}
+#zonaContenido {
+	position:relative;
+	top:0em;
+	left:0%;
+	width:100%;
+	height:100%;
+}
+#localizacion {
+	position:relative;
+	top:3%;
+	left:1%;
+	width:100%;
+}
+#tituloForm {
+	position:relative;
+	top:4%;
+	left:1%;
+	width:80%;
+}
+#tituloForm2 {
+	position:relative;
+	top:4%;
+	left:1%;
+	width:100%;
+}
+#frmBusqueda {
+	position:relative;
+	top:5%;
+	left:1%;
+	width:80%;
+	background-color:#f5f5f5;
+	border-top:solid 1px #dcdcdc;
+	border-left:solid 1px #dcdcdc;
+	border-right:solid 1px #696969;
+	border-bottom:solid 1px #696969;
+}
+#frmBusqueda2 {
+	position:relative;
+	top:5%;
+	left:1%;
+	width:100%;
+	background-color:#f5f5f5;
+	border-top:solid 1px #dcdcdc;
+	border-left:solid 1px #dcdcdc;
+	border-right:solid 1px #696969;
+	border-bottom:solid 1px #696969;
+}
+
+#cuadroTotales {
+	position:relative;
+	top:5%;
+	background-color:#f5f5f5;
+	border-top:solid 1px #dcdcdc;
+	border-left:solid 1px #dcdcdc;
+	border-right:solid 1px #696969;
+	border-bottom:solid 1px #696969;
+}
+
+#frmBusqueda li {
+	list-style-image:url(../img/error2.png);
+	color:#000;
+	text-transform:uppercase;
+	text-align:left;
+	height:20px;
+	vertical-align:middle;
+}
+
+#botonBusqueda {
+	position:relative;
+	top:5%;
+	left:1%;
+	width:80%;	
+	text-align:right;
+	margin-top:.5em;
+	padding-top:1em;
+/*	border-top:solid 1px #696969;	*/
+}
+#lineaResultado {
+	position:relative;
+	top:10%;
+	left:1%;
+	width:100%;	
+}
+#cabeceraResultado {
+	position:relative;
+	top:11%;
+	left:1%;
+	width:80%;	
+}
+#cabeceraResultado2 {
+	position:relative;
+	top:11%;
+	left:1%;
+	width:100%;	
+}
+.totalResultado  {
+	background-color:#ff8c00;
+	color:#fff;
+}
+#frmResultado {
+	position:relative;
+	top:11%;
+	left:1%;
+	width:80%;
+/*
+	background-color:#f5f5f5;
+	border-top:solid 1px #dcdcdc;
+	border-left:solid 1px #dcdcdc;
+	border-right:solid 1px #696969;
+	border-bottom:solid 1px #696969;
+*/
+}
+/*****************************************/
+/* clases relativas a tablas             */
+.header {
+	background-color:#4ECC17;
+	color:#fff;
+	text-transform:uppercase;
+	text-align:center;
+	font-weight:bold;
+	height:20px;
+	vertical-align:middle;
+}
+.mensaje {
+	background-color: #666666;
+	color:#fff;
+	text-transform:uppercase;
+	text-align:center;
+	font-weight:bold;
+	height:20px;
+	vertical-align:middle;
+}
+.mensajeminimo {
+	background-color: #FF0000;
+	color:#fff;
+	text-transform:uppercase;
+	text-align:center;
+	font-weight:bold;
+	height:20px;
+	vertical-align:middle;
+}
+.cabeceraTabla {
+	background-color:#5f5f5f;
+	color:#fff;
+	font-weight:bold;
+	text-align:center;
+	text-transform:uppercase;
+}
+.itemParTabla {
+	background-color:#ccc;
+}
+.itemImparTabla {
+	background-color:#f5f5f5;
+}
+/*****************************************/
+/* clases relativas a hiperenlace        */
+a:link {
+	font:8pt verdana,arial;
+	color:#000;
+}
+a:visited {
+	font:8pt verdana,arial;
+	color:#000;
+}
+a:hover {
+	font:8pt verdana,arial;
+	color:#ff8c00;
+}
+/*****************************************/
+/* clases relativas a la fuente de texto */
+.fuente8 {
+	font:8pt helvetica;		
+}
+.aDerecha {
+	text-align:right;
+}
+.aCentro {
+	text-align:center;
+}
+/*****************************************/
+/* clases relativas a objetos            */
+.boton {
+	color:#000;
+	background-color:#dcdcdc;
+	border-style:solid;
+	border-color:#696969;
+	border-width:1px 1px 1px 1px;
+    font:bold 8pt helvetica;
+    text-transform:lowercase;
+    width:90px;
+    height:15pt;
+}
+
+.botonprov {
+	color:#000;
+	background-color:#dcdcdc;
+	border-style:solid;
+	border-color:#696969;
+	border-width:1px 1px 1px 1px;
+    font:bold 8pt helvetica;
+    text-transform:lowercase;
+    width:130px;
+    height:15pt;
+}
+
+.cajaPequena {
+	background-color:#fff;
+	font:8pt helvetica;	
+	color:#000;
+	width:75px;
+	border-color:#696969;	
+	border-style :solid;
+	border-width :1px;
+	height:15pt;
+}
+
+.cajaPequena2 {
+	background-color:#fff;
+	font:8pt helvetica;	
+	color:#000;
+	width:55px;
+	border-color:#696969;	
+	border-style :solid;
+	border-width :1px;
+	height:15pt;
+}
+
+.cajaMinima {
+	background-color:#fff;
+	font:8pt helvetica;	
+	color:#000;
+	width:30px;
+	border-color:#696969;	
+	border-style :solid;
+	border-width :1px;
+	height:15pt;
+}
+
+.cajaTotales {
+	background-color:#FFD9B3;
+	font:8pt helvetica;	
+	color:#000;
+	width:75px;
+	border-color:#696969;	
+	border-style :solid;
+	border-width :1px;
+	height:15pt;
+	text-align:right;
+}
+
+.cajaMedia {
+	background-color:#fff;
+	font:8pt helvetica;
+	text-transform:uppercase;
+	color:#000;
+	width:150px;
+	border-color:#696969;
+	border-style :solid;
+	border-width :1px;
+	height:15pt;
+}
+.cajaGrande {
+	background-color:#fff;
+	font:8pt helvetica;
+	text-transform:uppercase;
+	color:#000;
+	width:250px;
+	border-color:#696969;
+	border-style :solid;
+	border-width :1px;
+	height:15pt;
+}
+.comboPequeno {
+	background-color:#fff;
+	font:8pt helvetica;
+	color:#000;
+	width:75px;
+	border-color:#696969;
+	border-style :solid;
+	border-width :1px;
+	height:15pt;
+}
+.comboMedio {
+	background-color:#fff;
+	font:8pt helvetica;
+	color:#000;
+	width:150px;
+	border-color:#696969;
+	border-style :solid;
+	border-width :1px;
+	height:15pt;
+}
+.comboGrande {
+	background-color:#fff;
+	font:8pt helvetica;
+	color:#000;
+	width:250px;
+	border-color:#696969;
+	border-style :solid;
+	border-width :1px;
+	height:15pt;
+}
