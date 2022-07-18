@@ -1,5 +1,5 @@
 <?php 
-include('./conectar.php');
+//include('./conectar.php');
 $usuario=$_POST['usuario'];
 $contraseña=$_POST['password'];
 session_start();

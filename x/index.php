@@ -16,19 +16,15 @@ var MenuPrincipal = [
 		//[null,'Proveedores','./proveedores/index.php','principal','Proveedores'],
 		[null,'Listado de Personal','./clientes/index.php','principal','Clientes']
 	],
-	[null,'Historial',null,null,'Productos',
+	/*[null,'Historial',null,null,'Productos',
 		[null,'Historial Formulario','./articulos/index.php','principal','Articulos'],
-		//[null,'Familias','./familias/index.php','principal','Familias']
-	],
-	[null,'Formularios Personal',null,null,'Ventas clientes',
-		[null,'Area 0001','./ventas_mostrador/index.php','principal','Ventas Mostrador'],
-		[null,'Area 0002','./facturas_clientes/index.php','principal','Facturas'],
-		[null,'Area 0003','./albaranes_clientes/index.php','principal','Albaranes'],
-		[null,'Area 0004','./lote_albaranes_clientes/index.php','principal','Facturar albaranes']
+		[null,'Familias','./familias/index.php','principal','Familias']
+	],*/
+	[null,'Formularios',null,null,'Ventas clientes',
+		[null,'Listar Formularios','./albaranes_clientes/index.php','principal','Albaranes'],
 	],
 	[null,'Supervisores',null,null,'Compras proveedores',
-		[null,'Lista de supervisores','./facturas_proveedores/index.php','principal','Proveedores'],
-		//[null,'Albaranes','./albaranes_proveedores/index.php','principal','Albaranes'],
+		[null,'Lista Supervisores','./albaranes_proveedores/index.php','principal','Albaranes'],
 		//[null,'Facturar albaranes','./lote_albaranes_proveedores/index.php','principal','Facturar albaranes'],
 	],
 	/*[null,'Tesoreria',null,null,'Tesoreria',

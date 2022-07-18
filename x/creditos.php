@@ -11,7 +11,7 @@
 	font-size: 10px;
 }
 .Estilo6 {font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif;}
-.Estilo7 {font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif; background:#D0FDCE; font-weight: bold}
+.Estilo7 {font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif; background:#33DAFF; font-weight: bold}
 -->
 </style>
 </head>
@@ -30,12 +30,13 @@
   </tr>
   <tr>
     <td>&nbsp;</td>
-    <td><div align="center" class="Estilo7">Mienbros</div></td>
+    <td><div align="center" class="Estilo7">Desarrolladores</div></td>
     <td>&nbsp;</td>
   </tr>
   <tr>
     <td>&nbsp;</td>
-    <td><div align="center" class="Estilo6">Castillo Llanos Alberth</div></td>
+    <td><div align="center" class="Estilo6">Castillo Llanos Alberth</div>
+    <div align="center" class="Estilo6">Larico Cari Mark Josue</div></td>
     <td>&nbsp;</td>
   </tr>
   <tr>
@@ -45,7 +46,7 @@
   </tr>
   <tr>
     <td>&nbsp;</td>
-    <td><div align="center" class="Estilo6">Manuel Sauceda Garcia</div></td>
+    <td><div align="center" class="Estilo6">Calla Ayma Cinthia</div></td>
     <td>&nbsp;</td>
   </tr>
   <tr>
@@ -55,7 +56,7 @@
   </tr>
   <tr>
     <td>&nbsp;</td>
-    <td><div align="center" class="Estilo6">Oliver Plathey</div></td>
+    <td><div align="center" class="Estilo6">------------------</div></td>
     <td>&nbsp;</td>
   </tr>
     <tr>
@@ -65,7 +66,7 @@
   </tr>
   <tr>
     <td>&nbsp;</td>
-    <td><div align="center" class="Estilo6">Harish Chauhan</div></td>
+    <td><div align="center" class="Estilo6">-------------------</div></td>
     <td>&nbsp;</td>
   </tr>
     <tr>
