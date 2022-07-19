@@ -12,21 +12,20 @@ include("conectar.php");
 <!--
 var MenuPrincipal = [
 	[null,'Inicio','central2.php','principal','Inicio'],
-	[null,'Personal',null,null,'Ventas clientes',
+	[null,'Gestion Usuarios','./clientes/index.php','principal','Clientes'],	
 		//[null,'Proveedores','./proveedores/index.php','principal','Proveedores'],
-		[null,'Listado de Personal','./clientes/index.php','principal','Clientes']
-	],
+		//[null,'Listado de Personal','./clientes/index.php','principal','Clientes']
+	//	],
 	/*[null,'Historial',null,null,'Productos',
 		[null,'Historial Formulario','./articulos/index.php','principal','Articulos'],
 		[null,'Familias','./familias/index.php','principal','Familias']
 	],*/
-	[null,'Formularios',null,null,'Ventas clientes',
-		[null,'Listar Formularios','./albaranes_clientes/index.php','principal','Albaranes'],
-	],
-	[null,'Supervisores',null,null,'Compras proveedores',
+	[null,'Formularios','./albaranes_clientes/index.php','principal','Albaranes'],
+	//],
+	/*[null,'Supervisores',null,null,'Compras proveedores',
 		[null,'Lista Supervisores','./albaranes_proveedores/index.php','principal','Albaranes'],
 		//[null,'Facturar albaranes','./lote_albaranes_proveedores/index.php','principal','Facturar albaranes'],
-	],
+	],*/
 	/*[null,'Tesoreria',null,null,'Tesoreria',
 		[null,'Cobros','./cobros/index.php','principal','Cobros'],
 		[null,'Pagos','./pagos/index.php','principal','Pagos'],
