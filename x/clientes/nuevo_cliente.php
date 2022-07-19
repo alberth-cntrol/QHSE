@@ -29,7 +29,7 @@
 		<div id="pagina">
 			<div id="zonaContenido">
 				<div align="center">
-				<div id="tituloForm" class="header">INSERTAR CLIENTE </div>
+				<div id="tituloForm" class="header">INSERTAR USUARIO </div>
 				<div id="frmBusqueda">
 				<form id="formulario" name="formulario" method="post" action="guardar_cliente.php">
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
@@ -39,7 +39,7 @@
 					        <td width="42%" rowspan="14" align="left" valign="top"><ul id="lista-errores"></ul></td>
 						</tr>
 						<tr>
-						  <td>NIF / CIF</td>
+						  <td>DNI</td>
 						  <td><input id="nif" type="text" class="cajaPequena" NAME="anif" maxlength="15"></td>
 				      </tr>
 						<tr>
@@ -47,7 +47,7 @@
 						  <td><input NAME="adireccion" type="text" class="cajaGrande" id="direccion" size="45" maxlength="45"></td>
 				      </tr>
 						<tr>
-						  <td>Localidad</td>
+						  <td>Ciudad</td>
 						  <td><input NAME="alocalidad" type="text" class="cajaGrande" id="localidad" size="35" maxlength="35"></td>
 				      </tr>
 					  <?php
@@ -56,7 +56,7 @@
 						$contador=0;
 					  ?>
 						<tr>
-							<td width="15%">Provincia</td>
+							<td width="15%">Area</td>
 							<td width="43%"><select id="cboProvincias" name="cboProvincias" class="comboGrande">
 							<option value="0">Seleccione una provincia</option>
 								<?php
@@ -66,46 +66,29 @@
 								} ?>				
 								</select>							</td>
 				        </tr>
-						<?php
-					  	$query_formapago="SELECT * FROM formapago WHERE borrado=0 ORDER BY nombrefp ASC";
-						$res_formapago=mysqli_query($descriptor,$query_formapago);
+
+
+					  <?php
+					  	$query_tipou="SELECT * FROM tipoU ORDER BY nombreusuario ASC";
+						$res_tipou=mysqli_query($descriptor,$query_tipou);
 						$contador=0;
 					  ?>
+
+
 						<tr>
-							<td width="15%">Forma de pago</td>
-							<td width="43%"><select id="cboFPago" name="cboFPago" class="comboGrande">
-							<option value="0">Seleccione una forma de pago</option>
+							<td width="15%">Rol</td>
+							<td width="43%"><select id="nombreusuario" name="nombreusuario" class="comboGrande">
+							<option value="0">Seleccione tipo de usuario</option>
 								<?php
-								while ($contador < mysqli_num_rows($res_formapago)) { ?>
-								<option value="<?php echo mysqli_result($res_formapago,$contador,"codformapago")?>"><?php echo mysqli_result($res_formapago,$contador,"nombrefp")?></option>
+								while ($contador < mysqli_num_rows($res_tipou)) { ?>
+								<option value="<?php echo mysqli_result($res_tipou,$contador,"nombreusuario")?>"><?php echo mysqli_result($res_tipou,$contador,"nombreusuario")?></option>
 								<?php $contador++;
-								} ?>	
-											</select>							</td>
+								} ?>				
+								</select>							</td>
 				        </tr>
-						<?php
-					  	$query_entidades="SELECT * FROM entidades WHERE borrado=0 ORDER BY nombreentidad ASC";
-						$res_entidades=mysqli_query($descriptor,$query_entidades);
-						$contador=0;
-					  ?>
-						<tr>
-							<td width="15%">Entidad Bancaria</td>
-							<td width="43%"><select id="cboBanco" name="cboBanco" class="comboGrande">
-							<option value="0">Seleccione una entidad bancaria</option>
-									<?php
-								while ($contador < mysqli_num_rows($res_entidades)) { ?>
-								<option value="<?php echo mysqli_result($res_entidades,$contador,"codentidad")?>"><?php echo mysqli_result($res_entidades,$contador,"nombreentidad")?></option>
-								<?php $contador++;
-								} ?>
-											</select>							</td>
-				        </tr>
-						<tr>
-							<td>Cuenta bancaria</td>
-							<td><input id="cuentabanco" type="text" class="cajaGrande" NAME="acuentabanco" maxlength="20"></td>
-					    </tr>
-						<tr>
-							<td>C&oacute;digo postal </td>
-							<td><input id="codpostal" type="text" class="cajaPequena" NAME="acodpostal" maxlength="5"></td>
-					    </tr>
+
+						
+						
 						<tr>
 							<td>Tel&eacute;fono </td>
 							<td><input id="telefono" name="atelefono" type="text" class="cajaPequena" maxlength="14"></td>
@@ -117,11 +100,12 @@
 						<tr>
 							<td>Correo electr&oacute;nico  </td>
 							<td><input NAME="aemail" type="text" class="cajaGrande" id="email" size="35" maxlength="35"></td>
-					    </tr>
-												<tr>
-							<td>Direcci&oacute;n web </td>
-							<td><input NAME="aweb" type="text" class="cajaGrande" id="web" size="45" maxlength="45"></td>
-					    </tr>
+						</tr>
+						<tr>
+							<td>contraseña </td>
+							<td><input NAME="aemail" type="text" class="cajaGrande" id="password" size="35" maxlength="35"></td>
+						</tr>
+					
 					</table>
 			  </div>
 				<div id="botonBusqueda">

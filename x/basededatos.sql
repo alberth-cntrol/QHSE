@@ -512,6 +512,23 @@ CREATE TABLE `proveedores` (
 
 -- --------------------------------------------------------
 
+CREATE TABLE `tipou` (
+  `id` int(10) NOT NULL,
+  `nombreusuario` varchar(40) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-----------------------------------------------------------
+INSERT INTO `tipou` (`id`, `nombreusuario`) VALUES
+(1, 'Administrador'),
+(2, 'Usuario');
+COMMIT;
+
+
+
+
+
+
+
 -- 
 -- Estructura de tabla para la tabla `provincias`
 -- 

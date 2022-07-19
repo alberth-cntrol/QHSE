@@ -105,7 +105,7 @@ if ($cadena_busqueda<>"") {
 		<div id="pagina">
 			<div id="zonaContenido">
 				<div align="center">
-				<div id="tituloForm" class="header">Buscar PERSONAL </div>
+				<div id="tituloForm" class="header">Gestión de Usuarios </div>
 				<div id="frmBusqueda">
 				<form id="form_busqueda" name="form_busqueda" method="post" action="rejilla.php" target="frame_rejilla">
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>					
@@ -124,7 +124,7 @@ if ($cadena_busqueda<>"") {
 						</tr>
 						<tr>
 						  <td>DNI</td>
-						  <td><input id="nif" type="text" class="cajaPequena" NAME="nif" maxlength="15" value="<?php echo $nif?>"></td>
+						  <td><input id="nif" type="text" class="cajaPequena" NAME="dni" maxlength="15" value="<?php echo $nif?>"></td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
@@ -137,7 +137,7 @@ if ($cadena_busqueda<>"") {
 						<tr>
 							<td>Area</td>
 							<td><select id="cboProvincias" name="cboProvincias" class="comboMedio">
-								<option value="0" selected>Eliga el Area</option>
+								<option value="0" selected>Seleccionar Area</option>
 								<?php
 								while ($contador < mysqli_num_rows($res_provincias)) { 
 									if ( mysqli_result($res_provincias,$contador,"codprovincia") == $provincia) { ?>
@@ -152,8 +152,8 @@ if ($cadena_busqueda<>"") {
 								</select>							</td>
 					    </tr>
 					  <tr>
-						  <td>Direccion</td>
-						  <td><input id="localidad" type="text" class="cajaGrande" NAME="localidad" maxlength="30" value="<?php echo $localidad?>"></td>
+						  <td>Correo</td>
+						  <td><input id="localidad" type="text" class="cajaGrande" NAME="email" maxlength="30" value="<?php echo $localidad?>"></td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
