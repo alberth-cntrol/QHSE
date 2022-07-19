@@ -30,18 +30,18 @@
                 <form action="validar.php" method="POST">
           
                   <div class="form-outline mb-4">
-              <input type="email" id="typeEmailX-2" class="form-control form-control-lg" />
-              <label class="form-label" for="typeEmailX-2">Email</label>
+              <input type="text" id="typeEmailX-2" class="form-control form-control-lg" name="usuario"/>
+              <label class="form-label" for="typeEmailX-2">Usuario</label>
             </div>
 
             <div class="form-outline mb-4">
-              <input type="password" id="typePasswordX-2" class="form-control form-control-lg" />
+              <input type="password" id="typePasswordX-2" class="form-control form-control-lg" name="password"/>
               <label class="form-label" for="typePasswordX-2">Password</label>
             </div>
 
                   <div class="text-center pt-1 mb-5 pb-1">
                     <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Iniciar Sesion</button>
-                    <a class="text-muted" href="#!">Olvidaste tu contraseña?</a>
+                    <!--<a class="text-muted" href="#!">Olvidaste tu contraseña?</a>-->
                   </div>
 
                   <!--<div class="d-flex align-items-center justify-content-center pb-4">
