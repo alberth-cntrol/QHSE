@@ -9,14 +9,14 @@ if ($cadena_busqueda<>"") {
 	$array_cadena_busqueda=explode("~",$cadena_busqueda);
 	$codcliente=$array_cadena_busqueda[1];
 	$nombre=$array_cadena_busqueda[2];
-	$nif=$array_cadena_busqueda[3];
+	$dni=$array_cadena_busqueda[3];
 	$provincia=$array_cadena_busqueda[4];
 	$localidad=$array_cadena_busqueda[5];
 	$telefono=$array_cadena_busqueda[6];
 } else {
 	$codcliente="";
 	$nombre="";
-	$nif="";
+	$dni="";
 	$provincia="";
 	$localidad="";
 	$telefono="";
@@ -49,7 +49,7 @@ if ($cadena_busqueda<>"") {
 		function imprimir() {
 			var codcliente=document.getElementById("codcliente").value;
 			var nombre=document.getElementById("nombre").value;
-			var nif=document.getElementById("nif").value;			
+			var dni=document.getElementById("dni").value;			
 			var provincia=document.getElementById("cboProvincias").value;
 			var localidad=document.getElementById("localidad").value;
 			var telefono=document.getElementById("telefono").value;
@@ -76,7 +76,7 @@ if ($cadena_busqueda<>"") {
 		function hacer_cadena_busqueda() {
 			var codcliente=document.getElementById("codcliente").value;
 			var nombre=document.getElementById("nombre").value;
-			var nif=document.getElementById("nif").value;			
+			var dni=document.getElementById("dni").value;			
 			var provincia=document.getElementById("cboProvincias").value;
 			var localidad=document.getElementById("localidad").value;
 			var telefono=document.getElementById("telefono").value;
