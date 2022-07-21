@@ -53,7 +53,7 @@ if ($cadena_busqueda<>"") {
 			var provincia=document.getElementById("cboProvincias").value;
 			var localidad=document.getElementById("localidad").value;
 			var telefono=document.getElementById("telefono").value;
-			window.open("../fpdf/clientes.php?codcliente="+codcliente+"&nombre="+nombre+"&nif="+nif+"&provincia="+provincia+"&localidad="+localidad+"&telefono="+telefono);
+			window.open("../fpdf/clientes.php?codcliente="+codcliente+"&nombre="+nombre+"&dni="+dni+"&provincia="+provincia+"&localidad="+localidad+"&telefono="+telefono);
 		}
 		
 		function buscar() {
@@ -81,7 +81,7 @@ if ($cadena_busqueda<>"") {
 			var localidad=document.getElementById("localidad").value;
 			var telefono=document.getElementById("telefono").value;
 			var cadena="";
-			cadena="~"+codcliente+"~"+nombre+"~"+nif+"~"+provincia+"~"+localidad+"~"+telefono+"~";
+			cadena="~"+codcliente+"~"+nombre+"~"+dni+"~"+provincia+"~"+localidad+"~"+telefono+"~";
 			return cadena;
 			}
 			
@@ -124,7 +124,7 @@ if ($cadena_busqueda<>"") {
 						</tr>
 						<tr>
 						  <td>DNI</td>
-						  <td><input id="nif" type="text" class="cajaPequena" NAME="dni" maxlength="15" value="<?php echo $nif?>"></td>
+						  <td><input id="dni" type="text" class="cajaPequena" NAME="dni" maxlength="15" value="<?php echo $dni?>"></td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
