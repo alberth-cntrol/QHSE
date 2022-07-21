@@ -5,23 +5,20 @@ $accion=$_POST["accion"];
 if (!isset($accion)) { $accion=$_GET["accion"]; }
 
 $nombre=$_POST["Anombre"];
-$nif=$_POST["anif"];
+$dni=$_POST["dni"];
 $direccion=$_POST["adireccion"];
 $localidad=$_POST["alocalidad"];
 $codprovincia=$_POST["cboProvincias"];
-$codformapago=$_POST["cboFPago"];
-$codentidad=$_POST["cboBanco"];
-$cuentabanco=$_POST["acuentabanco"];
-$codpostal=$_POST["acodpostal"];
+$rol=$_POST["nombreusuario"];
 $telefono=$_POST["atelefono"];
 $movil=$_POST["amovil"];
 $email=$_POST["aemail"];
-$web=$_POST["aweb"];
+$password=$_POST["password"];
 
 if ($accion=="alta") {
-	$query_operacion="INSERT INTO clientes (codcliente, nombre, nif, direccion, codprovincia, localidad, codformapago, codentidad, cuentabancaria, codpostal, telefono, movil, email, web, borrado) VALUES ('', '$nombre', '$nif', '$direccion', '$codprovincia', '$localidad', '$codformapago', '$codentidad', '$cuentabanco', '$codpostal', '$telefono', '$movil', '$email', '$web', '0')";					
+	$query_operacion="INSERT INTO clientes (codcliente, nombre, dni, direccion, codprovincia, localidad,  telefono, movil, email, password,  borrado) VALUES ('', '$nombre', '$dni', '$direccion', '$codprovincia', '$localidad', '$telefono', '$movil', '$email', '$password', '0')";					
 	$rs_operacion=mysqli_query($descriptor,$query_operacion);
-	if ($rs_operacion) { $mensaje="El cliente ha sido dado de alta correctamente"; }
+	if ($rs_operacion) { $mensaje="El Usuario ha sido dado de alta correctamente"; }
 	$cabecera1="Inicio >> Clientes &gt;&gt; Nuevo Cliente ";
 	$cabecera2="INSERTAR CLIENTE ";
 	$sel_maximo="SELECT max(codcliente) as maximo FROM clientes";
@@ -29,11 +26,13 @@ if ($accion=="alta") {
 	$codcliente=mysqli_result($rs_maximo,0,"maximo");
 }
 
+
+
 if ($accion=="modificar") {
 	$codcliente=$_POST["codcliente"];
-	$query="UPDATE clientes SET nombre='$nombre', nif='$nif', direccion='$direccion', codprovincia='$codprovincia', localidad='$localidad', codformapago='$codformapago', codentidad='$codentidad', cuentabancaria='$cuentabanco', codpostal='$codpostal', telefono='$telefono', movil='$movil', email='$email', web='$web', borrado=0 WHERE codcliente='$codcliente'";
+	$query="UPDATE clientes SET nombre='$nombre', dni='$dni', direccion='$direccion', codprovincia='$codprovincia', localidad='$localidad', rol='$rol',  telefono='$telefono', movil='$movil', email='$email', password= '$password', borrado=0 WHERE codcliente='$codcliente'";
 	$rs_query=mysqli_query($descriptor,$query);
-	if ($rs_query) { $mensaje="Los datos del cliente han sido modificados correctamente"; }
+	if ($rs_query) { $mensaje="Los datos del Usuario han sido modificados correctamente"; }
 	$cabecera1="Inicio >> Clientes &gt;&gt; Modificar Cliente ";
 	$cabecera2="MODIFICAR CLIENTE ";
 }
@@ -42,24 +41,21 @@ if ($accion=="baja") {
 	$codcliente=$_GET["codcliente"];
 	$query="UPDATE clientes SET borrado=1 WHERE codcliente='$codcliente'";
 	$rs_query=mysqli_query($descriptor,$query);
-	if ($rs_query) { $mensaje="El cliente ha sido eliminado correctamente"; }
+	if ($rs_query) { $mensaje="El Usuario ha sido eliminado correctamente"; }
 	$cabecera1="Inicio >> Clientes &gt;&gt; Eliminar Cliente ";
 	$cabecera2="ELIMINAR CLIENTE ";
 	$query_mostrar="SELECT * FROM clientes WHERE codcliente='$codcliente'";
 	$rs_mostrar=mysqli_query($descriptor,$query_mostrar);
 	$nombre=mysqli_result($rs_mostrar,0,"nombre");
-	$nif=mysqli_result($rs_mostrar,0,"nif");
+	$dni=mysqli_result($rs_mostrar,0,"dni");
 	$direccion=mysqli_result($rs_mostrar,0,"direccion");
 	$localidad=mysqli_result($rs_mostrar,0,"localidad");
 	$codprovincia=mysqli_result($rs_mostrar,0,"codprovincia");
-	$codformapago=mysqli_result($rs_mostrar,0,"codformapago");
-	$codentidad=mysqli_result($rs_mostrar,0,"codentidad");
-	$cuentabanco=mysqli_result($rs_mostrar,0,"cuentabancaria");
-	$codpostal=mysqli_result($rs_mostrar,0,"codpostal");
+	$rol=mysqli_result($rs_mostrar, 0, "rol");
 	$telefono=mysqli_result($rs_mostrar,0,"telefono");
 	$movil=mysqli_result($rs_mostrar,0,"movil");
 	$email=mysqli_result($rs_mostrar,0,"email");
-	$web=mysqli_result($rs_mostrar,0,"web");
+	$password=mysqli_result($rs_mostrar,0,"password");
 }
 
 ?>
@@ -92,10 +88,7 @@ if ($accion=="baja") {
 				<div id="tituloForm" class="header"><?php echo $cabecera2?></div>
 				<div id="frmBusqueda">
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
-						<tr>
-							<td width="15%"></td>
-							<td width="85%" colspan="2" class="mensaje"><?php echo $mensaje;?></td>
-					    </tr>
+						
 						<tr>
 							<td width="15%">C&oacute;digo</td>
 							<td width="85%" colspan="2"><?php echo $codcliente?></td>
@@ -105,8 +98,8 @@ if ($accion=="baja") {
 						    <td width="85%" colspan="2"><?php echo $nombre?></td>
 					    </tr>
 						<tr>
-						  <td>NIF / CIF</td>
-						  <td colspan="2"><?php echo $nif?></td>
+						  <td>DNI</td>
+						  <td colspan="2"><?php echo $dni?></td>
 					  </tr>
 						<tr>
 						  <td>Direcci&oacute;n</td>
@@ -126,43 +119,26 @@ if ($accion=="baja") {
 						}
 					  ?>
 						<tr>
-							<td width="15%">Provincia</td>
+							<td width="15%">Area</td>
 							<td width="85%" colspan="2"><?php echo $nombreprovincia?></td>
 					    </tr>
+
+
 						<?php
-						if ($codformapago<>0) {
-							$query_formapago="SELECT * FROM formapago WHERE codformapago='$codformapago'";
-							$res_formapago=mysqli_query($descriptor,$query_formapago);
-							$nombrefp=mysqli_result($res_formapago,0,"nombrefp");
+					  	if ($rol<>0) {
+							$query_tipou="SELECT * FROM tipoU ORDER BY nombreusuario ASC";
+						    $res_tipou=mysqli_query($descriptor,$query_tipou);
+							$nombreusuario=mysqli_result($res_tipou,0,"nombreusuario");
 						} else {
-							$nombrefp="Sin determinar";
+							$nombreusuario="Sin determinar";						
 						}
 					  ?>
 						<tr>
-							<td width="15%">Forma de pago</td>
-							<td width="85%" colspan="2"><?php echo $nombrefp?></td>
+							<td width="15%">Rol</td>
+							<td width="85%" colspan="2"><?php echo $nombreusuario?></td>
 					    </tr>
-						<?php
-						if ($codentidad<>0) {
-							$query_entidades="SELECT * FROM entidades WHERE codentidad='$codentidad'";
-							$res_entidades=mysqli_query($descriptor,$query_entidades);
-							$nombreentidad=mysqli_result($res_entidades,0,"nombreentidad");
-						} else {
-							$nombreentidad="Sin determinar";
-						}
-					  ?>
-						<tr>
-							<td width="15%">Entidad Bancaria</td>
-							<td width="85%" colspan="2"><?php echo $nombreentidad?></td>
-					    </tr>
-						<tr>
-							<td>Cuenta bancaria</td>
-							<td colspan="2"><?php echo $cuentabanco?></td>
-						</tr>
-						<tr>
-							<td>C&oacute;digo postal</td>
-							<td colspan="2"><?php echo $codpostal?></td>
-						</tr>
+
+						
 						<tr>
 							<td>Tel&eacute;fono</td>
 							<td><?php echo $telefono?></td>
@@ -175,9 +151,11 @@ if ($accion=="baja") {
 							<td>Correo electr&oacute;nico  </td>
 							<td colspan="2"><?php echo $email?></td>
 						</tr>
-												<tr>
-							<td>Direcci&oacute;n web </td>
-							<td colspan="2"><?php echo $web?></td>
+						
+						<tr>
+							<td>contraseña </td>
+							<td colspan="2"><?php echo $password?></td>
+
 						</tr>
 					</table>
 			  </div>

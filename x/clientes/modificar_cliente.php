@@ -5,6 +5,11 @@ $codcliente=$_GET["codcliente"];
 $query="SELECT * FROM clientes WHERE codcliente='$codcliente'";
 $rs_query=mysqli_query($descriptor,$query);
 
+
+
+
+
+
 ?>
 <html>
 	<head>
@@ -36,7 +41,7 @@ $rs_query=mysqli_query($descriptor,$query);
 		<div id="pagina">
 			<div id="zonaContenido">
 				<div align="center">
-				<div id="tituloForm" class="header">MODIFICAR CLIENTE </div>
+				<div id="tituloForm" class="header">MODIFICAR USUARIO </div>
 				<div id="frmBusqueda">
 				<form id="formulario" name="formulario" method="post" action="guardar_cliente.php">
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
@@ -50,8 +55,8 @@ $rs_query=mysqli_query($descriptor,$query);
 						    <td width="43%"><input NAME="Anombre" type="text" class="cajaGrande" id="nombre" size="45" maxlength="45" value="<?php echo mysqli_result($rs_query,0,"nombre")?>"></td>
 				        </tr>
 						<tr>
-						  <td>NIF / CIF</td>
-						  <td><input id="nif" type="text" class="cajaPequena" NAME="anif" maxlength="15" value="<?php echo mysqli_result($rs_query,0,"nif")?>"></td>
+						  <td>DNI</td>
+						  <td><input id="dni" type="text" class="cajaPequena" NAME="dni" maxlength="15" value="<?php echo mysqli_result($rs_query,0,"dni")?>"></td>
 				      </tr>
 						<tr>
 						  <td>Direcci&oacute;n</td>
@@ -68,7 +73,7 @@ $rs_query=mysqli_query($descriptor,$query);
 						$contador=0;
 					  ?>
 						<tr>
-							<td width="15%">Provincia</td>
+							<td width="15%">Area</td>
 							<td width="43%"><select id="cboProvincias" name="cboProvincias" class="comboGrande">
 							<option value="0">Seleccione una provincia</option>
 								<?php
@@ -81,54 +86,29 @@ $rs_query=mysqli_query($descriptor,$query);
 								} ?>				
 								</select>							</td>
 				        </tr>
+						
+
 						<?php
-						$codformapago=mysqli_result($rs_query,0,"codformapago");
-					  	$query_formapago="SELECT * FROM formapago WHERE borrado=0 ORDER BY nombrefp ASC";
-						$res_formapago=mysqli_query($descriptor,$query_formapago);
+						$nombreusuario=mysqli_result($rs_query,0,"nombreusuario");
+					  	$query_tipou="SELECT * FROM tipoU ORDER BY nombreusuario ASC";
+						$res_tipou=mysqli_query($descriptor,$query_tipou);
 						$contador=0;
 					  ?>
+
+
 						<tr>
-							<td width="15%">Forma de pago</td>
-							<td width="43%"><select id="cboFPago" name="cboFPago" class="comboGrande">
-							<option value="0">Seleccione una forma de pago</option>
+							<td width="15%">Rol</td>
+							<td width="43%"><select id="nombreusuario" name="nombreusuario" class="comboGrande">
+							<option value="0">Seleccione tipo de usuario</option>
 								<?php
-								while ($contador < mysqli_num_rows($res_formapago)) { 
-									if ($codformapago == mysqli_result($res_formapago,$contador,"codformapago")) { ?>
-								<option value="<?php echo mysqli_result($res_formapago,$contador,"codformapago")?>" selected="selected"><?php echo mysqli_result($res_formapago,$contador,"nombrefp")?></option>
-								<?php } else { ?>
-								<option value="<?php echo mysqli_result($res_formapago,$contador,"codformapago")?>"><?php echo mysqli_result($res_formapago,$contador,"nombrefp")?></option>
-								<?php } $contador++;
-								} ?>	
-											</select>							</td>
+								while ($contador < mysqli_num_rows($res_tipou)) { ?>
+								<option value="<?php echo mysqli_result($res_tipou,$contador,"nombreusuario")?>"><?php echo mysqli_result($res_tipou,$contador,"nombreusuario")?></option>
+								<?php $contador++;
+								} ?>				
+								</select>							</td>
 				        </tr>
-						<?php
-						$codentidad=mysqli_result($rs_query,0,"codentidad");
-					  	$query_entidades="SELECT * FROM entidades WHERE borrado=0 ORDER BY nombreentidad ASC";
-						$res_entidades=mysqli_query($descriptor,$query_entidades);
-						$contador=0;
-					  ?>
-						<tr>
-							<td width="15%">Entidad Bancaria</td>
-							<td width="43%"><select id="cboBanco" name="cboBanco" class="comboGrande">
-							<option value="0">Seleccione una Entidad Bancaria</option>
-									<?php
-								while ($contador < mysqli_num_rows($res_entidades)) { 
-									if ($codentidad == mysqli_result($res_entidades,$contador,"codentidad")) { ?>
-								<option value="<?php echo mysqli_result($res_entidades,$contador,"codentidad")?>" selected="selected"><?php echo mysqli_result($res_entidades,$contador,"nombreentidad")?></option>
-								<?php } else { ?>
-								<option value="<?php echo mysqli_result($res_entidades,$contador,"codentidad")?>"><?php echo mysqli_result($res_entidades,$contador,"nombreentidad")?></option>
-								<?php } $contador++;
-								} ?>
-											</select>							</td>
-				        </tr>
-						<tr>
-							<td>Cuenta bancaria</td>
-							<td><input id="cuentabanco" type="text" class="cajaGrande" NAME="acuentabanco" maxlength="20" value="<?php echo mysqli_result($rs_query,0,"cuentabancaria")?>"></td>
-					    </tr>
-						<tr>
-							<td>C&oacute;digo postal </td>
-							<td><input id="codpostal" type="text" class="cajaPequena" NAME="acodpostal" maxlength="5" value="<?php echo mysqli_result($rs_query,0,"codpostal")?>"></td>
-					    </tr>
+
+						
 						<tr>
 							<td>Tel&eacute;fono </td>
 							<td><input id="telefono" name="atelefono" type="text" class="cajaPequena" maxlength="14" value="<?php echo mysqli_result($rs_query,0,"telefono")?>"></td>
@@ -141,10 +121,12 @@ $rs_query=mysqli_query($descriptor,$query);
 							<td>Correo electr&oacute;nico  </td>
 							<td><input NAME="aemail" type="text" class="cajaGrande" id="email" size="35" maxlength="35" value="<?php echo mysqli_result($rs_query,0,"email")?>"></td>
 					    </tr>
-												<tr>
-							<td>Direcci&oacute;n web </td>
-							<td><input NAME="aweb" type="text" class="cajaGrande" id="web" size="45" maxlength="45" value="<?php echo mysqli_result($rs_query,0,"web")?>"></td>
-					    </tr>
+
+						<tr>
+							<td>contraseña </td>
+							<td><input NAME="password" type="text" class="cajaGrande" id="password" size="35" maxlength="35"></td>
+						</tr>
+
 					</table>
 			  </div>
 				<div id="botonBusqueda">

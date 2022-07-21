@@ -200,18 +200,14 @@ CREATE TABLE `artpro` (
 CREATE TABLE `clientes` (
   `codcliente` int(5) NOT NULL auto_increment,
   `nombre` varchar(45) NOT NULL,
-  `nif` varchar(12) NOT NULL,
+  `dni` varchar(12) NOT NULL,
   `direccion` varchar(50) NOT NULL,
   `codprovincia` int(2) NOT NULL default '0',
   `localidad` varchar(35) NOT NULL,
-  `codformapago` int(2) NOT NULL default '0',
-  `codentidad` int(2) NOT NULL default '0',
-  `cuentabancaria` varchar(20) NOT NULL,
-  `codpostal` varchar(5) NOT NULL,
   `telefono` varchar(14) NOT NULL,
   `movil` varchar(14) NOT NULL,
   `email` varchar(35) NOT NULL,
-  `web` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
   `borrado` varchar(1) NOT NULL default '0',
   PRIMARY KEY  (`codcliente`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='Clientes' AUTO_INCREMENT=1 ;

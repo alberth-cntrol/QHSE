@@ -40,7 +40,7 @@
 						</tr>
 						<tr>
 						  <td>DNI</td>
-						  <td><input id="nif" type="text" class="cajaPequena" NAME="anif" maxlength="15"></td>
+						  <td><input id="dni" type="text" class="cajaPequena" NAME="dni" maxlength="15"></td>
 				      </tr>
 						<tr>
 						  <td>Direcci&oacute;n</td>
@@ -103,7 +103,7 @@
 						</tr>
 						<tr>
 							<td>contraseña </td>
-							<td><input NAME="aemail" type="text" class="cajaGrande" id="password" size="35" maxlength="35"></td>
+							<td><input NAME="password" type="text" class="cajaGrande" id="password" size="35" maxlength="35"></td>
 						</tr>
 					
 					</table>

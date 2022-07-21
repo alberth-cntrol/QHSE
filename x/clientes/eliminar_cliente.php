@@ -38,7 +38,7 @@ $rs_query=mysqli_query($descriptor,$query);
 		<div id="pagina">
 			<div id="zonaContenido">
 				<div align="center">
-				<div id="tituloForm" class="header">ELIMINAR CLIENTE </div>
+				<div id="tituloForm" class="header">ELIMINAR USUARIO </div>
 				<div id="frmBusqueda">
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
 						<tr>
@@ -72,45 +72,31 @@ $rs_query=mysqli_query($descriptor,$query);
 						}
 					  ?>
 						<tr>
-							<td width="15%">Provincia</td>
+							<td width="15%">Area</td>
 							<td width="85%" colspan="2"><?php echo $nombreprovincia?></td>
 					    </tr>
+						
+
+
+
 						<?php
-						$codformapago=mysqli_result($rs_query,0,"codformapago");
-						if ($codformapago<>0) {
-							$query_formapago="SELECT * FROM formapago WHERE codformapago='$codformapago'";
-							$res_formapago=mysqli_query($descriptor,$query_formapago);
-							$nombrefp=mysqli_result($res_formapago,0,"nombrefp");
+						$rol=mysqli_result($rs_query,0,"rol");
+					  	if ($rol<>0) {
+							$query_tipou="SELECT * FROM tipoU ORDER BY nombreusuario ASC";
+						    $res_tipou=mysqli_query($descriptor,$query_tipou);
+							$nombreusuario=mysqli_result($res_tipou,0,"nombreusuario");
 						} else {
-							$nombrefp="Sin determinar";
+							$nombreusuario="Sin determinar";						
 						}
 					  ?>
 						<tr>
-							<td width="15%">Forma de pago</td>
-							<td width="85%" colspan="2"><?php echo $nombrefp?></td>
+							<td width="15%">Rol</td>
+							<td width="85%" colspan="2"><?php echo $nombreusuario?></td>
 					    </tr>
-						<?php
-						$codentidad=mysqli_result($rs_query,0,"codentidad");
-						if ($codentidad<>0) {
-							$query_entidades="SELECT * FROM entidades WHERE codentidad='$codentidad'";
-							$res_entidades=mysqli_query($descriptor,$query_entidades);
-							$nombreentidad=mysqli_result($res_entidades,0,"nombreentidad");
-						} else {
-							$nombreentidad="Sin determinar";
-						}
-					  ?>
-						<tr>
-							<td width="15%">Entidad Bancaria</td>
-							<td width="85%" colspan="2"><?php echo $nombreentidad?></td>
-					    </tr>
-						<tr>
-							<td>Cuenta bancaria</td>
-							<td colspan="2"><?php echo mysqli_result($rs_query,0,"cuentabancaria")?></td>
-						</tr>
-						<tr>
-							<td>C&oacute;digo postal</td>
-							<td colspan="2"><?php echo mysqli_result($rs_query,0,"codpostal")?></td>
-						</tr>
+
+
+
+
 						<tr>
 							<td>Tel&eacute;fono</td>
 							<td><?php echo mysqli_result($rs_query,0,"telefono")?></td>
@@ -122,11 +108,14 @@ $rs_query=mysqli_query($descriptor,$query);
 						<tr>
 							<td>Correo electr&oacute;nico  </td>
 							<td colspan="2"><?php echo mysqli_result($rs_query,0,"email")?></td>
+						
+
+						<tr>
+							<td>contraseña </td>
+							<td colspan="2"><?php echo mysqli_result($rs_query,0,"password")?></td>
+
 						</tr>
-												<tr>
-							<td>Direcci&oacute;n web </td>
-							<td colspan="2"><?php echo mysqli_result($rs_query,0,"web")?></td>
-						</tr>
+
 					</table>
 			  </div>
 				<div id="botonBusqueda">

@@ -24,7 +24,7 @@ $filas=mysqli_result($rs_busqueda,0,"filas");
 ?>
 <html>
 	<head>
-		<title>Clientes</title>
+		<title>Usuarios</title>
 		<link href="../estilos/estilos.css" type="text/css" rel="stylesheet">
 		<script language="javascript">
 		

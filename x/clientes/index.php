@@ -153,7 +153,7 @@ if ($cadena_busqueda<>"") {
 					    </tr>
 					  <tr>
 						  <td>Correo</td>
-						  <td><input id="localidad" type="text" class="cajaGrande" NAME="email" maxlength="30" value="<?php echo $localidad?>"></td>
+						  <td><input id="email" type="text" class="cajaGrande" NAME="email" maxlength="30" value="<?php echo $localidad?>"></td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
@@ -180,7 +180,7 @@ if ($cadena_busqueda<>"") {
 			  </table>
 				</div>
 				<div id="cabeceraResultado" class="header">
-					relacion de Personal</div>
+					relacion de Usuarios</div>
 				<div id="frmResultado">
 				<table class="fuente8" width="100%" cellspacing=0 cellpadding=3 border=0 ID="Table1">
 						<tr class="cabeceraTabla">
