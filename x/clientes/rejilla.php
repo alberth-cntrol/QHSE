@@ -3,7 +3,7 @@ include ("../conectar.php");
 
 @$codcliente=$_POST["codcliente"];
 @$nombre=$_POST["nombre"];
-@$nif=$_POST["nif"];
+@$dni=$_POST["dni"];
 @$codprovincia=$_POST["cboProvincias"];
 @$localidad=$_POST["localidad"];
 @$telefono=$_POST["telefono"];
@@ -12,7 +12,7 @@ include ("../conectar.php");
 $where="1=1";
 if ($codcliente <> "") { $where.=" AND codcliente='$codcliente'"; }
 if ($nombre <> "") { $where.=" AND nombre like '%".$nombre."%'"; }
-if ($nif <> "") { $where.=" AND nif like '%".$nif."%'"; }
+if ($dni <> "") { $where.=" AND dni like '%".$dni."%'"; }
 if ($codprovincia > "0") { $where.=" AND codprovincia='$codprovincia'"; }
 if ($localidad <> "") { $where.=" AND localidad like '%".$localidad."%'"; }
 if ($telefono <> "") { $where.=" AND telefono like '%".$telefono."%'"; }
@@ -100,7 +100,7 @@ $filas=mysqli_result($rs_busqueda,0,"filas");
 							<td class="aCentro" width="8%"><?php echo $contador+1;?></td>
 							<td width="6%"><div align="center"><?php echo mysqli_result($res_resultado,$contador,"codcliente")?></div></td>
 							<td width="38%"><div align="left"><?php echo mysqli_result($res_resultado,$contador,"nombre")?></div></td>
-							<td class="aDerecha" width="13%"><div align="center"><?php echo mysqli_result($res_resultado,$contador,"nif")?></div></td>
+							<td class="aDerecha" width="13%"><div align="center"><?php echo mysqli_result($res_resultado,$contador,"dni")?></div></td>
 							<td class="aDerecha" width="19%"><div align="center"><?php echo mysqli_result($res_resultado,$contador,"telefono")?></div></td>
 							<td width="5%"><div align="center"><a href="#"><img src="../img/modificar.png" width="16" height="16" border="0" onClick="modificar_cliente(<?php echo mysqli_result($res_resultado,$contador,"codcliente")?>)" title="Modificar"></a></div></td>
 														<td width="5%"><div align="center"><a href="#"><img src="../img/ver.png" width="16" height="16" border="0" onClick="ver_cliente(<?php echo mysqli_result($res_resultado,$contador,"codcliente")?>)" title="Visualizar"></a></div></td>

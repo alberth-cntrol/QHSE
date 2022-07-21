@@ -50,8 +50,8 @@ $rs_query=mysqli_query($descriptor,$query);
 						    <td width="85%" colspan="2"><?php echo mysqli_result($rs_query,0,"nombre")?></td>
 					    </tr>
 						<tr>
-						  <td>NIF / CIF</td>
-						  <td colspan="2"><?php echo mysqli_result($rs_query,0,"nif")?></td>
+						  <td>DNI</td>
+						  <td colspan="2"><?php echo mysqli_result($rs_query,0,"dni")?></td>
 					  </tr>
 						<tr>
 						  <td>Direcci&oacute;n</td>

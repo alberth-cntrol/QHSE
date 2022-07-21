@@ -8,14 +8,14 @@ header('Pragma: no-cache');
 </head>
 <script language="javascript">
 
-function pon_prefijo(nombre,nif) {
+function pon_prefijo(nombre,dni) {
 	parent.document.form_busqueda.nombre.value=nombre;
-	parent.document.form_busqueda.nif.value=nif;
+	parent.document.form_busqueda.dni.value=dni;
 }
 
 function limpiar() {
 	parent.document.form_busqueda.nombre.value="";
-	parent.document.form_busqueda.nif.value="";
+	parent.document.form_busqueda.dni.value="";
 	parent.document.form_busqueda.codcliente.value="";
 }
 
@@ -29,7 +29,7 @@ function limpiar() {
 	if (mysqli_num_rows($rs_tabla)>0) {
 		?>
 		<script languaje="javascript">
-		pon_prefijo("<? echo mysqli_result($rs_tabla,0,nombre) ?>","<? echo mysqli_result($rs_tabla,0,nif) ?>");
+		pon_prefijo("<? echo mysqli_result($rs_tabla,0,nombre) ?>","<? echo mysqli_result($rs_tabla,0,dni) ?>");
 		</script>
 		<? 
 	} else { ?>
