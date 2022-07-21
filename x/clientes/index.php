@@ -25,7 +25,7 @@ if ($cadena_busqueda<>"") {
 ?>
 <html>
 	<head>
-		<title>Personal</title>
+		<title>Gestion Usuarios</title>
 		<link href="../estilos/estilos.css" type="text/css" rel="stylesheet">
 		<script language="javascript">
 		
@@ -105,7 +105,7 @@ if ($cadena_busqueda<>"") {
 		<div id="pagina">
 			<div id="zonaContenido">
 				<div align="center">
-				<div id="tituloForm" class="header">Gestión de Usuarios </div>
+				<div id="tituloForm" class="header">Gestión de Usuarios</div>
 				<div id="frmBusqueda">
 				<form id="form_busqueda" name="form_busqueda" method="post" action="rejilla.php" target="frame_rejilla">
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>					
