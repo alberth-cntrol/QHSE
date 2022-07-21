@@ -58,7 +58,7 @@
 						<tr>
 							<td width="15%">Area</td>
 							<td width="43%"><select id="cboProvincias" name="cboProvincias" class="comboGrande">
-							<option value="0">Seleccione una provincia</option>
+							<option value="0">Seleccione un Area</option>
 								<?php
 								while ($contador < mysqli_num_rows($res_provincias)) { ?>
 								<option value="<?php echo mysqli_result($res_provincias,$contador,"codprovincia")?>"><?php echo mysqli_result($res_provincias,$contador,"nombreprovincia")?></option>
