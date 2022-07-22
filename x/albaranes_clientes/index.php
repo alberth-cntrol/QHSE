@@ -23,191 +23,85 @@ if ($cadena_busqueda<>"") {
 }
 
 ?>
-<html>
-	<head>
-		<title>Albaranes</title>
-		<link href="../estilos/estilos.css" type="text/css" rel="stylesheet">
-		<link href="../calendario/calendar-blue.css" rel="stylesheet" type="text/css">
-		<script type="text/JavaScript" language="javascript" src="../calendario/calendar.js"></script>
-		<script type="text/JavaScript" language="javascript" src="../calendario/lang/calendar-sp.js"></script>
-		<script type="text/JavaScript" language="javascript" src="../calendario/calendar-setup.js"></script>
-		<script language="javascript">
-		
-		function inicio() {
-			document.getElementById("form_busqueda").submit();
-		}
-		
-		function nuevo_albaran() {
-			location.href="nuevo_albaran.php";
-		}
-		
-		function buscar() {
-			var cadena;
-			cadena=hacer_cadena_busqueda();
-			document.getElementById("cadena_busqueda").value=cadena;
-			if (document.getElementById("iniciopagina").value=="") {
-				document.getElementById("iniciopagina").value=1;
-			} else {
-				document.getElementById("iniciopagina").value=document.getElementById("paginas").value;
-			}
-			document.getElementById("form_busqueda").submit();
-		}
-		
-		function paginar() {
-			document.getElementById("iniciopagina").value=document.getElementById("paginas").value;
-			document.getElementById("form_busqueda").submit();
-		}
-		
-		function hacer_cadena_busqueda() {
-			var codcliente=document.getElementById("codcliente").value;
-			var nombre=document.getElementById("nombre").value;
-			var numalbaran=document.getElementById("numalbaran").value;			
-			var cboEstados=document.getElementById("cboEstados").value;
-			var fechainicio=document.getElementById("fechainicio").value;
-			var fechafin=document.getElementById("fechafin").value;
-			var cadena="";
-			cadena="~"+codcliente+"~"+nombre+"~"+numalbaran+"~"+cboEstados+"~"+fechainicio+"~"+fechafin+"~";
-			return cadena;
-			}
-		
-		var cursor;
-		if (document.all) {
-		// Está utilizando EXPLORER
-		cursor='hand';
-		} else {
-		// Está utilizando MOZILLA/NETSCAPE
-		cursor='pointer';
-		}
-		
-		function limpiar() {
-			document.getElementById("form_busqueda").reset();
-		}
-		
-		function abreVentana(){
-			miPopup = window.open("ventana_clientes.php","miwin","width=700,height=380,scrollbars=yes");
-			miPopup.focus();
-		}
-		
-		function validarcliente(){
-			var codigo=document.getElementById("codcliente").value;
-			miPopup = window.open("comprobarcliente_ini.php?codcliente="+codigo,"frame_datos","width=700,height=80,scrollbars=yes");
-		}	
-		
-		</script>
-	</head>
-	<body onLoad="inicio()">
-		<div id="pagina">
-			<div id="zonaContenido">
-				<div align="center">
-				<div id="tituloForm" class="header">Buscar ALBARAN </div>
-				<div id="frmBusqueda">
-				<form id="form_busqueda" name="form_busqueda" method="post" action="rejilla.php" target="frame_rejilla">
-					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>					
-						<tr>
-							<td width="16%">Codigo de cliente </td>
-							<td width="68%"><input id="codcliente" type="text" class="cajaPequena" NAME="codcliente" maxlength="10" value="<?php echo $codcliente?>"> <img src="../img/ver.png" width="16" height="16" onClick="abreVentana()" title="Buscar cliente" onMouseOver="style.cursor=cursor"> <img src="../img/cliente.png" width="16" height="16" onClick="validarcliente()" title="Validar cliente" onMouseOver="style.cursor=cursor"></td>
-							<td width="5%">&nbsp;</td>
-							<td width="5%">&nbsp;</td>
-							<td width="6%" align="right"></td>
-						</tr>
-						<tr>
-							<td>Nombre</td>
-							<td><input id="nombre" name="nombre" type="text" class="cajaGrande" maxlength="45" value="<?php echo $nombre?>"></td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-						</tr>
-						<tr>
-						  <td>Num. Albaran</td>
-						  <td><input id="numalbaran" type="text" class="cajaPequena" NAME="numalbaran" maxlength="15" value="<?php echo $numalbaran?>"></td>
-						  <td>&nbsp;</td>
-						  <td>&nbsp;</td>
-						  <td>&nbsp;</td>
-					  </tr>
-						<tr>
-							<td>Estado</td>
-							<td><select id="cboEstados" name="cboEstados" class="comboMedio">
-								<option value="0" selected>Todos los estados</option>
-								<option value="1">Sin Facturar</option>
-								<option value="2">Facturados</option>			
-								</select></td>
-					    </tr>
-					  <tr>
-						  <td>Fecha de inicio</td>
-						  <td><input id="fechainicio" type="text" class="cajaPequena" NAME="fechainicio" maxlength="10" value="<?php echo $fechainicio?>" readonly><img src="../img/calendario.png" name="Image1" id="Image1" width="16" height="16" border="0" id="Image1" onMouseOver="this.style.cursor='pointer'" title="Calendario">
-        <script type="text/javascript">
-					Calendar.setup(
-					  {
-					inputField : "fechainicio",
-					ifFormat   : "%d/%m/%Y",
-					button     : "Image1"
-					  }
-					);
-		</script>	</td>
-						  <td>&nbsp;</td>
-						  <td>&nbsp;</td>
-						  <td>&nbsp;</td>
-					  </tr>
-						<tr>
-						  <td>Fecha de fin</td>
-						  <td><input id="fechafin" type="text" class="cajaPequena" NAME="fechafin" maxlength="10" value="<?php echo $fechafin?>" readonly><img src="../img/calendario.png" name="Image1" id="Image1" width="16" height="16" border="0" id="Image1" onMouseOver="this.style.cursor='pointer'">
-        <script type="text/javascript">
-					Calendar.setup(
-					  {
-					inputField : "fechafin",
-					ifFormat   : "%d/%m/%Y",
-					button     : "Image1"
-					  }
-					);
-		</script></td>
-						  <td>&nbsp;</td>
-						  <td>&nbsp;</td>
-						  <td>&nbsp;</td>
-					  </tr>
-					</table>
-			  </div>
-			 	<div id="botonBusqueda"><img src="../img/botonbuscar.jpg" width="69" height="22" border="1" onClick="buscar()" onMouseOver="style.cursor=cursor">
-			 	  <img src="../img/botonlimpiar.jpg" width="69" height="22" border="1" onClick="limpiar()" onMouseOver="style.cursor=cursor">
-					 <img src="../img/botonnuevoalbaran.jpg" width="106" height="22" border="1" onClick="nuevo_albaran()" onMouseOver="style.cursor=cursor"></div>
-			  <div id="lineaResultado">
-			  <table class="fuente8" width="80%" cellspacing=0 cellpadding=3 border=0>
-			  	<tr>
-				<td width="50%" align="left">N de albaranes encontrados <input id="filas" type="text" class="cajaPequena" NAME="filas" maxlength="5" readonly></td>
-				<td width="50%" align="right">Mostrados <select name="paginas" id="paginas" onChange="paginar()">
-		          </select></td>
-			  </table>
-				</div>
-				<div id="cabeceraResultado" class="header">
-					relacion de ALBARANES </div>
-				<div id="frmResultado">
-				<table class="fuente8" width="100%" cellspacing=0 cellpadding=3 border=0 ID="Table1">
-						<tr class="cabeceraTabla">
-							<td width="8%">ITEM</td>
-							<td width="8%">N. ALBARAN</td>
-							<td width="29%">CLIENTE </td>
-							<td width="10%">IMPORTE </td>							
-							<td width="10%">FECHA</td>
-							<td width="10%">ESTADO </td>
-							<td width="5%">&nbsp;</td>
-							<td width="5%">&nbsp;</td>
-							<td width="5%">&nbsp;</td>
-							<td width="5%">&nbsp;</td>
-							<td width="5%">&nbsp;</td>
-						</tr>
-				</table>
-				</div>
-				<input type="hidden" id="iniciopagina" name="iniciopagina">
-				<input type="hidden" id="cadena_busqueda" name="cadena_busqueda">
-			</form>
-				<div id="lineaResultado">
-					<iframe width="100%" height="250" id="frame_rejilla" name="frame_rejilla" frameborder="0">
-						<ilayer width="100%" height="250" id="frame_rejilla" name="frame_rejilla"></ilayer>
-					</iframe>
-					<iframe id="frame_datos" name="frame_datos" width="0" height="0" frameborder="0">
-					<ilayer width="0" height="0" id="frame_datos" name="frame_datos"></ilayer>
-					</iframe>
-				</div>
-			</div>
-		  </div>			
-		</div>
-	</body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="jspdf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h3>Registro de capacitacion</h3>
+                <hr>
+                <form id="form">
+                    <div class="mb-3">
+                        <label for="curso" class="form-label">Asitencia</label>
+                        <select class="form-select" id="curso">
+                            <option value="">Seleccione un curso</option>
+                            <option value="Desarrollo de aplicaciones web">Trabajo en altura</option>
+                            <option value="Desarrollo de aplicaciones moviles">Desarrollo de aplicaciones moviles</option>
+                        </select>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="nombre" class="form-label">Nombres</label>
+                            <input type="text" class="form-control" id="nombre">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="apellido" class="form-label">Apellidos</label>
+                            <input type="text" class="form-control" id="apellido">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo electronico</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="direccion" class="form-label">DNI</label>
+                            <input type="text" class="form-control" id="direccion">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="telefono" class="form-label">Telefono</label>
+                            <input type="text" class="form-control" id="telefono">
+                        </div>
+                    </div>
+
+                    
+
+                    <span class="d-block pb-2">Firma digital aqui</span>
+                    <div class="signature mb-2" style="width: 100%; height: 200px;">
+                        <canvas id="signature-canvas"
+                            style="border: 1px dashed red; width: 100%; height: 200px;"></canvas>
+                    </div>
+
+					<from name="form" action="" method="post" enctype="multiparth/from-data">
+						<strong>Hulla digital</strong>
+						<input typr="text" name="huelladiital" autocomplete="off" require value="">
+						<strong>Seleccionar imagen</strong>
+						<input type="file" name="imagen" id="imagen">
+						 
+					
+
+                    <button type="submit" class="btn btn-primary mb-4">Generar PDF</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
 </html>
