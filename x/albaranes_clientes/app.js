@@ -31,15 +31,19 @@ window.addEventListener('load', async () => {
         e.preventDefault();
 
         let curso = document.getElementById('curso').value;
+        let capa=document.getElementById('capa').value;
         let nombres = document.getElementById('nombre').value;
         let apellidos = document.getElementById('apellido').value;
         let email = document.getElementById('email').value;
-        let dni = document.getElementById('direccion').value;
-        let telefono = document.getElementById('telefono').value;;
-        
-        
+        let dni = document.getElementById('dni').value;
+        let telefono = document.getElementById('telefono').value;
+        let horas=document.getElementById('horas').value;
+        let nhoras=document.getElementById('nhoras').value;
+        let empre=document.getElementById('empre').value;
+        let ptra=document.getElementById('ptra').value;
 
-        generatePDF(curso, nombres, apellidos, email, dni, telefono);
+
+        generatePDF(curso, nombres, apellidos, email, dni, telefono,horas,nhoras,capa,empre,ptra);
     })
 
 });
@@ -50,8 +54,8 @@ async function generatePDF(curso, nombres, apellidos, email, dni, telefono) {
 
     const pdf = new jsPDF('p', 'pt', 'letter');
 
-    pdf.addImage(image, 'PNG', 0, 0, 565, 792);
-    pdf.addImage(signatureImage, 'PNG', 200, 605, 300, 60);
+    pdf.addImage(image, 'PNG', 0, 0, 893,390);
+    pdf.addImage(signatureImage, 'PNG', 718, 450, 300, 60);
 
     pdf.setFontSize(12);
     pdf.text(curso, 260, 125);
@@ -67,6 +71,7 @@ async function generatePDF(curso, nombres, apellidos, email, dni, telefono) {
     pdf.text(dni, 170, 400);
     pdf.text(telefono, 170, 456);
     pdf.text(email, 170, 475);
+    pdf.text(horas, )
 
     pdf.setFillColor(0,0,0);
 

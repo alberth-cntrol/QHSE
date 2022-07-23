@@ -18,7 +18,7 @@ if ($cadena_busqueda<>"") {
 	$nombre="";
 	$numalbaran="";
 	$cboEstados="";
-	$fechainicio="";
+	$s="";
 	$fechafin="";
 }
 
@@ -38,21 +38,24 @@ if ($cadena_busqueda<>"") {
 </head>
 
 <body>
-    <div class="container mt-4">
+    <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 <h3>Registro de capacitacion</h3>
                 <hr>
                 <form id="form">
                     <div class="mb-3">
-                        <label for="curso" class="form-label">Asitencia</label>
+                        <label for="curso" class="form-label">Cursos</label>
                         <select class="form-select" id="curso">
                             <option value="">Seleccione un curso</option>
                             <option value="Desarrollo de aplicaciones web">Trabajo en altura</option>
                             <option value="Desarrollo de aplicaciones moviles">Desarrollo de aplicaciones moviles</option>
                         </select>
                     </div>
-
+                    <div class="mb-3">
+                        <label for="capa" class="form-label">Nombre de la Capacitacion</label>
+                        <input type="text" class="form-control" id="capa">
+                    </div>
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="nombre" class="form-label">Nombres</label>
@@ -63,16 +66,30 @@ if ($cadena_busqueda<>"") {
                             <input type="text" class="form-control" id="apellido">
                         </div>
                     </div>
-
+                    
                     <div class="mb-3">
                         <label for="email" class="form-label">Correo electronico</label>
                         <input type="email" class="form-control" id="email">
                     </div>
+                    <div class="mb-3">
+                        <label for="capa" class="form-label">Nombre de la Capacitacion</label>
+                        <input type="text" class="form-control" id="capa">
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="horas" class="form-label">N° de horas</label>
+                            <input type="time" class="form-control" id="horas">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="nhoras" class="form-label">Hora de inicio</label>
+                            <input type="time" class="form-control" id="nhoras">
+                        </div>
+                    </div>
 
                     <div class="row mb-3">
                         <div class="col-md-6">
-                            <label for="direccion" class="form-label">DNI</label>
-                            <input type="text" class="form-control" id="direccion">
+                            <label for="dni" class="form-label">DNI</label>
+                            <input type="text" class="form-control" id="dni">
                         </div>
                         <div class="col-md-6">
                             <label for="telefono" class="form-label">Telefono</label>
@@ -81,6 +98,16 @@ if ($cadena_busqueda<>"") {
                     </div>
 
                     
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="empre" class="form-label">Empreza</label>
+                            <input type="text" class="form-control" id="empre">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="ptra" class="form-label">Puesto de Trabajo</label>
+                            <input type="text" class="form-control" id="ptra">
+                        </div>
+                    </div>
 
                     <span class="d-block pb-2">Firma digital aqui</span>
                     <div class="signature mb-2" style="width: 100%; height: 200px;">
@@ -93,6 +120,7 @@ if ($cadena_busqueda<>"") {
 						<input typr="text" name="huelladiital" autocomplete="off" require value="">
 						<strong>Seleccionar imagen</strong>
 						<input type="file" name="imagen" id="imagen">
+                    </from>   
 						 
 					
 
