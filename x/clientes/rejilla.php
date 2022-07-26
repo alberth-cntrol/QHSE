@@ -113,7 +113,7 @@ $filas=mysqli_result($rs_busqueda,0,"filas");
 					<?php } else { ?>
 					<table class="fuente8" width="87%" cellspacing=0 cellpadding=3 border=0>
 						<tr>
-							<td width="100%" class="mensaje"><?php echo "No hay ning&uacute;n cliente que cumpla con los criterios de b&uacute;squeda";?></td>
+							<td width="100%" class="mensaje"><?php echo "No hay ning&uacute;n usuario que cumpla con los criterios de b&uacute;squeda";?></td>
 					    </tr>
 					</table>					
 					<?php } ?>					

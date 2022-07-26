@@ -20,7 +20,7 @@ if ($accion=="alta") {
 	$rs_operacion=mysqli_query($descriptor,$query_operacion);
 	if ($rs_operacion) { $mensaje="El Usuario ha sido dado de alta correctamente"; }
 	$cabecera1="Inicio >> Clientes &gt;&gt; Nuevo Cliente ";
-	$cabecera2="INSERTAR CLIENTE ";
+	$cabecera2="INSERTAR USUARIO ";
 	$sel_maximo="SELECT max(codcliente) as maximo FROM clientes";
 	$rs_maximo=mysqli_query($descriptor,$sel_maximo);
 	$codcliente=mysqli_result($rs_maximo,0,"maximo");

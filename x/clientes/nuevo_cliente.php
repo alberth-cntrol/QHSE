@@ -29,7 +29,7 @@
 		<div id="pagina">
 			<div id="zonaContenido">
 				<div align="center">
-				<div id="tituloForm" class="header">INSERTAR USUARIO </div>
+				<div id="tituloForm" class="header">INSERTAR USUARIO</div>
 				<div id="frmBusqueda">
 				<form id="formulario" name="formulario" method="post" action="guardar_cliente.php">
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>

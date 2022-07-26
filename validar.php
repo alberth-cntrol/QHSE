@@ -8,24 +8,25 @@ $_SESSION['usuario']=$usuario;
 
 $conexion=mysqli_connect("localhost","root","","basededatos");
 
-$consulta="SELECT*FROM login where usuario='$usuario' and password='$contraseña  '";
-
+////////
+$consulta="SELECT*FROM clientes where nombre='$usuario' and password='$contraseña'";
 $resultado=mysqli_query($conexion,$consulta);
 
+$filas=mysqli_fetch_array($resultado);
 
-$filas=mysqli_num_rows($resultado);
-if($filas){
+if($filas['codprovincia']==1){ //administrador
     header("location:x");
 
-}else{
+}else
+if($filas['codprovincia']==4){ //cliente
+header("location:x/albaranes_clientes/index.php");
+}
+else{
     ?>
     <?php
-    include("index.php");
+    include("index.html");
     ?>
-    <h1 class="bad">Error en la autoticacion</h1>
-    <?php 
+    <h1 class="bad">ERROR EN LA AUTENTIFICACION</h1>
+    <?php
 }
-mysqli_free_result($resultado);
-mysqli_close($conexion);
-
 ?>
