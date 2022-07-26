@@ -1,0 +1,159 @@
+<div class="container" id="form-field">
+    <form id="form-data">
+        <div class="row">
+            <div class="card col-md-12 border border-primary">
+                <div class="card-body">
+                    <h3 contenteditable="true" title="Enter Title" class="text-center" id="form-title">Examen PHP</h3>
+                    <hr class="border-primary">
+                    <p contenteditable="true" id="form-description" title="Enter Description" class="form-description text-center">Con este sistema de preguntar vamos a concluir tus conocimientos en PHP</p>
+                </div>
+                
+            </div>
+        </div>
+        <div>
+            <div id="question-field" class="row ml-2 mr-2 ui-sortable highlight">
+                <div class="card mt-3 mb-3 col-md-12 question-item ui-state-default" data-item="0">
+                    <span class="item-move ui-sortable-handle"><i class="fa fa-braille"></i></span>
+                    <div class="card-body">
+                        <div class="row align-items-center d-flex">
+                            <div class="col-sm-8">
+                                <p class="question-text m-0" contenteditable="true" title="Write you question here">Qué es PHP?</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <select title="question choice type" name="choice" class="form-control choice-option">
+                                    <option value="p">paragraph</option>
+                                    <option value="checkbox">Mupliple choice (multiple answer)</option>
+                                    <option value="radio">Mupliple choice (single answer)</option>
+                                    <option value="file">File upload</option>
+                                </select>
+                            </div>
+                        </div>
+                        <hr class="border-dark">
+                        <div class="row ">
+                            <div class="form-group choice-field col-md-12">
+                                <textarea name="q[0]" class="form-control col-sm-12" cols="30" rows="5" placeholder="Escribe tu respuesta aquí" required="required"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="w-100 d-flex justify-content-between align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input req-item" type="checkbox" value="" required="required" checked="checked">
+                                <label class="form-check-label req-chk" for="">
+                                    * Requiruired
+                                </label>
+                            </div>
+                            <button class="btn btn-default border rem-q-item" type="button"><i class="fa fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+            
+<div class="card mt-3 mb-3 col-md-12 question-item ui-state-default" data-item="1">
+    <span class="item-move"><i class="fa fa-braille"></i></span>
+    <div class="card-body">
+        <div class="row align-items-center d-flex">
+            <div class="col-sm-8">
+                <p class="question-text m-0" contenteditable="true" title="Write you question here">Elige las características&nbsp;<span style="font-size: 1rem;">de PHP</span></p>
+            </div>
+            <div class="col-sm-4">
+                <select title="question choice type" name="choice" class="form-control choice-option">
+                    <option value="p">paragraph</option>
+                    <option value="checkbox">Mupliple choice (multiple answer)</option>
+                    <option value="radio">Mupliple choice (single answer)</option>
+                    <option value="file">File upload</option>
+                </select>
+            </div>
+        </div>
+        <hr class="border-dark">
+        <div class="row ">
+            <div class="form-group choice-field col-md-12"><div class="row w-100"><div class="col-sm-1 rem-on-display" onclick="$(this).closest('.row').remove()"><button class="btn btn-sm btn-default" type="button"><span class="fa fa-times"></span></button></div><div class="col-sm-11 d-flex align-items-center"><div class="form-check q-fc"><input class="form-check-input" name="q[1][]" type="checkbox" value="Enter Option" required="required"><label class="form-check-label" contenteditable="true" title="Enter option here">Gran extensión de documentación</label></div></div></div><div class="row w-100"><div class="col-sm-1 rem-on-display" onclick="$(this).closest('.row').remove()"><button class="btn btn-sm btn-default" type="button"><span class="fa fa-times"></span></button></div><div class="col-sm-11 d-flex align-items-center"><div class="form-check q-fc"><input class="form-check-input" name="q[1][]" type="checkbox" value="Enter Option"><label class="form-check-label" contenteditable="true" title="Enter option here">Permite programación orientada a objetos</label></div></div></div><div class="row w-100"><div class="col-sm-1 rem-on-display" onclick="$(this).closest('.row').remove()"><button class="btn btn-sm btn-default" type="button"><span class="fa fa-times"></span></button></div><div class="col-sm-11 d-flex align-items-center"><div class="form-check q-fc"><input class="form-check-input" name="q[1][]" type="checkbox" value="Enter Option"><label class="form-check-label" contenteditable="true" title="Enter option here">Es open source&nbsp;<br></label></div></div></div><div class="row w-100"><div class="col-sm-1 rem-on-display" onclick="$(this).closest('.row').remove()"><button class="btn btn-sm btn-default" type="button"><span class="fa fa-times"></span></button></div><div class="col-sm-11 d-flex align-items-center"><div class="form-check q-fc"><input class="form-check-input" name="q[1][]" type="checkbox" value="Enter Option"><label class="form-check-label" contenteditable="true" title="Enter option here">Está orientada a trabajar del lado del cliente</label></div></div></div><button type="button" class="add_chk btn btn-sm btn-default border"><i class="fa fa-plus"></i> Add option</button></div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <div class="w-100 d-flex justify-content-between align-items-center">
+            <div class="form-check">
+                <input class="form-check-input req-item" type="checkbox" value="" checked="checked">
+                <label class="form-check-label req-chk" for="">
+                    * Requiruired
+                </label>
+            </div>
+            <button class="btn btn-default border rem-q-item" type="button"><i class="fa fa-trash"></i></button>
+        </div>
+    </div>
+</div>
+
+<div class="card mt-3 mb-3 col-md-12 question-item ui-state-default" data-item="2">
+    <span class="item-move"><i class="fa fa-braille"></i></span>
+    <div class="card-body">
+        <div class="row align-items-center d-flex">
+            <div class="col-sm-8">
+                <p class="question-text m-0" contenteditable="true" title="Write you question here">Como escribir en pantalla en PHP y que devuelva true</p>
+            </div>
+            <div class="col-sm-4">
+                <select title="question choice type" name="choice" class="form-control choice-option">
+                    <option value="p">paragraph</option>
+                    <option value="checkbox">Mupliple choice (multiple answer)</option>
+                    <option value="radio">Mupliple choice (single answer)</option>
+                    <option value="file">File upload</option>
+                </select>
+            </div>
+        </div>
+        <hr class="border-dark">
+        <div class="row ">
+            <div class="form-group choice-field col-md-12"><div class="row w-100"><div class="col-sm-1 rem-on-display" onclick="$(this).closest('.row').remove()"><button class="btn btn-sm btn-default" type="button"><span class="fa fa-times"></span></button></div><div class="col-sm-11 d-flex align-items-center"><div class="form-check q-fc"><input class="form-check-input" name="q[2]" type="radio" value="Enter Option" required="required"><label class="form-check-label" contenteditable="true" title="Enter option here">Con echo</label></div></div></div><div class="row w-100"><div class="col-sm-1 rem-on-display" onclick="$(this).closest('.row').remove()"><button class="btn btn-sm btn-default" type="button"><span class="fa fa-times"></span></button></div><div class="col-sm-11 d-flex align-items-center"><div class="form-check q-fc"><input class="form-check-input" name="q[2]" type="radio" value="Enter Option"><label class="form-check-label" contenteditable="true" title="Enter option here">Con print</label></div></div></div><div class="row w-100"><div class="col-sm-1 rem-on-display" onclick="$(this).closest('.row').remove()"><button class="btn btn-sm btn-default" type="button"><span class="fa fa-times"></span></button></div><div class="col-sm-11 d-flex align-items-center"><div class="form-check q-fc"><input class="form-check-input" name="q[2]" type="radio" value="Enter Option"><label class="form-check-label" contenteditable="true" title="Enter option here">Con printf</label></div></div></div><button type="button" class="add_radio btn btn-sm btn-default border"><i class="fa fa-plus"></i> Add option</button></div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <div class="w-100 d-flex justify-content-between align-items-center">
+            <div class="form-check">
+                <input class="form-check-input req-item" type="checkbox" value="" checked="checked">
+                <label class="form-check-label req-chk" for="">
+                    * Requiruired
+                </label>
+            </div>
+            <button class="btn btn-default border rem-q-item" type="button"><i class="fa fa-trash"></i></button>
+        </div>
+    </div>
+</div>
+
+<div class="card mt-3 mb-3 col-md-12 question-item ui-state-default" data-item="3">
+    <span class="item-move"><i class="fa fa-braille"></i></span>
+    <div class="card-body">
+        <div class="row align-items-center d-flex">
+            <div class="col-sm-8">
+                <p class="question-text m-0" contenteditable="true" title="Write you question here">Agrega tu hoja de vida aquí en PDF</p>
+            </div>
+            <div class="col-sm-4">
+                <select title="question choice type" name="choice" class="form-control choice-option">
+                    <option value="p">paragraph</option>
+                    <option value="checkbox">Mupliple choice (multiple answer)</option>
+                    <option value="radio">Mupliple choice (single answer)</option>
+                    <option value="file">File upload</option>
+                </select>
+            </div>
+        </div>
+        <hr class="border-dark">
+        <div class="row ">
+            <div class="form-group choice-field col-md-12"><input type="file" name="q[3]" class="form-control-file" required="required"></div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <div class="w-100 d-flex justify-content-between align-items-center">
+            <div class="form-check">
+                <input class="form-check-input req-item" type="checkbox" value="" checked="checked">
+                <label class="form-check-label req-chk" for="">
+                    * Requiruired
+                </label>
+            </div>
+            <button class="btn btn-default border rem-q-item" type="button"><i class="fa fa-trash"></i></button>
+        </div>
+    </div>
+</div>
+</div>
+        </div>
+        <div class="d-flex w-100 justify-content-center" id="form-buidler-action">
+            <button class="btn btn-default border mr-1" type="button" id="add_q-item"><i class="fa fa-plus"></i> Add Item</button>
+            <button class="btn btn-default border ml-1" type="button" id="save_form"><i class="fa fa-save"></i> Save Form</button>
+        </div>
+    </form>
+</div>

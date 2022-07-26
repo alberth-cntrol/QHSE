@@ -34,102 +34,30 @@ if ($cadena_busqueda<>"") {
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script src="jspdf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    
     <script src="app.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
-                <h3>Registro de capacitacion</h3>
-                <hr>
-                <form id="form">
-                    <div class="mb-3">
-                        <label for="curso" class="form-label">Cursos</label>
-                        <select class="form-select" id="curso">
-                            <option value="">Seleccione un curso</option>
-                            <option value="Desarrollo de aplicaciones web">Trabajo en altura</option>
-                            <option value="Desarrollo de aplicaciones moviles">Desarrollo de aplicaciones moviles</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="capa" class="form-label">Nombre de la Capacitacion</label>
-                        <input type="text" class="form-control" id="capa">
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="nombre" class="form-label">Nombres</label>
-                            <input type="text" class="form-control" id="nombre">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="apellido" class="form-label">Apellidos</label>
-                            <input type="text" class="form-control" id="apellido">
-                        </div>
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Correo electronico</label>
-                        <input type="email" class="form-control" id="email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="capa" class="form-label">Nombre de la Capacitacion</label>
-                        <input type="text" class="form-control" id="capa">
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="horas" class="form-label">N° de horas</label>
-                            <input type="time" class="form-control" id="horas">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="nhoras" class="form-label">Hora de inicio</label>
-                            <input type="time" class="form-control" id="nhoras">
-                        </div>
-                    </div>
-
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="dni" class="form-label">DNI</label>
-                            <input type="text" class="form-control" id="dni">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="telefono" class="form-label">Telefono</label>
-                            <input type="text" class="form-control" id="telefono">
-                        </div>
-                    </div>
-
-                    
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="empre" class="form-label">Empreza</label>
-                            <input type="text" class="form-control" id="empre">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="ptra" class="form-label">Puesto de Trabajo</label>
-                            <input type="text" class="form-control" id="ptra">
-                        </div>
-                    </div>
-
-                    <span class="d-block pb-2">Firma digital aqui</span>
-                    <div class="signature mb-2" style="width: 100%; height: 200px;">
-                        <canvas id="signature-canvas"
-                            style="border: 1px dashed red; width: 100%; height: 200px;"></canvas>
-                    </div>
-
-					<from name="form" action="" method="post" enctype="multiparth/from-data">
-						<strong>Hulla digital</strong>
-						<input typr="text" name="huelladiital" autocomplete="off" require value="">
-						<strong>Seleccionar imagen</strong>
-						<input type="file" name="imagen" id="imagen">
-                    </from>   
-						 
-					
-
-                    <button type="submit" class="btn btn-primary mb-4">Generar PDF</button>
-                </form>
-            </div>
+<div class="card" style="--i:url(img1.jpg)">
+        <div class="content">
+            <h2>Asistencia</h2>
+            <a href="../albaranes_proveedores/index.php">Ver Detalles</a>
         </div>
     </div>
 
-</body>
+    <div class="card" style="--i:url(img2.jpg)">
+        <div class="content">
+            <h2>Herramientas</h2>
+            <a href="../articulos/index.php">Ver Detalles</a>
+        </div>
+    </div>
 
+    <div class="card" style="--i:url(img3.jpg)">
+        <div class="content">
+            <h2>Crear Formulario</h2>
+            <a href="../generador-formularios-master">Ver Detalles</a>
+        </div>
+    </div>
 </html>
